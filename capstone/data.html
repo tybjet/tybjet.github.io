@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Values, Ethics & Social Responsibility — Data Analysis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <h1>Values, Ethics & Social Responsibility</h1>
+      <p class="tagline">Focus: Data Analysis — accuracy, consent, reproducibility</p>
+    </div>
+
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html">Web Apps</a>
+      <a href="data.html" class="active">Data Analysis</a>
+      <a href="network.html">Networking</a>
+      <a href="refs.html">References</a>
+      <button id="themeToggle2" aria-label="Toggle theme">Toggle theme</button>
+    </nav>
+  </header>
+
+  <main class="content">
+    <article>
+      <h2>Introduction</h2>
+      <p>
+        Data analysts and scientists hold influence through insights and models. Ethical practice demands attention to
+        data provenance, sampling choices, model validity, and downstream impact.
+      </p>
+
+      <h2>Data Quality & Provenance</h2>
+      <p>
+        Decisions based on poor-quality or poorly-understood data can harm individuals and communities. Document
+        sources, collection methods, cleaning steps, and limitations. Use provenance metadata and version control for datasets.
+      </p>
+
+      <h2>Bias, Fairness, and Sampling</h2>
+      <p>
+        Sampling bias, measurement errors, and historical inequities can produce models that perpetuate harm.
+        Analyze demographic representation, use fairness metrics appropriate to context, and consider resampling or reweighting
+        when necessary. Public-facing models should be stress-tested for disparate impact.
+      </p>
+
+      <h2>Privacy-Preserving Techniques</h2>
+      <p>
+        When analyzing personally identifiable information (PII), apply anonymization techniques and consider privacy-preserving
+        methods like k-anonymity, differential privacy, or secure multi-party computation for collaborative analytics.
+      </p>
+
+      <h2>Reproducibility & Documentation</h2>
+      <p>
+        Reproducibility underpins trust. Share code and analysis pipelines (with redaction for sensitive data), use notebooks
+        with clear narrative, and pin library versions. Reproducible workflows are more auditable and easier to correct when mistakes occur.
+      </p>
+
+      <h2>Communication & Responsible Visualization</h2>
+      <p>
+        Present results with uncertainty and limitations clearly highlighted. Avoid misleading axis choices or cherry-picking metrics.
+        Consider stakeholders’ needs and avoid information overload; use layered explanations for audiences with different expertise.
+      </p>
+
+      <h2>Case Study: A Public Policy Dataset</h2>
+      <p>
+        Consider a dataset used to inform resource allocation. If the dataset undercounts certain neighborhoods due to
+        accessibility barriers, automated allocation can systematically disadvantage them. Addressing this may require
+        targeted data collection and community engagement before automation.
+      </p>
+
+      <h2>Conclusion</h2>
+      <p>
+        Ethical data analysis combines technical safeguards with human-centered evaluation. Analysts should act as stewards,
+        not merely technicians.
+      </p>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <p>See also: <a href="refs.html">References & further reading</a></p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+/* styles.css — separate file per requirement */
+
+/* Basic reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html,body { height: 100%; font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: #f7fbff; color: #0b1a2b; }
+
+/* Layout */
+.site-header {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem 1.25rem;
+  background: linear-gradient(90deg, #005f73 0%, #0a9396 100%);
+  color: #fff;
+}
+.brand h1 { font-size:1.25rem; margin-bottom:0.125rem; }
+.tagline { font-size:0.9rem; opacity:0.95; }
+
+.main-nav {
+  display:flex;
+  gap:0.5rem;
+  align-items:center;
+}
+.main-nav a {
+  color: #fff; text-decoration:none; padding:0.5rem 0.75rem; border-radius:8px; font-weight:600;
+}
+.main-nav a.active { background:rgba(255,255,255,0.12); box-shadow: inset 0 -2px 0 rgba(255,255,255,0.06); }
+.main-nav button {
+  background:transparent; color:#fff; border:1px solid rgba(255,255,255,0.18); padding:0.45rem 0.6rem; border-radius:6px; cursor:pointer;
+}
+
+/* Content */
+.content { max-width:900px; margin:1.25rem auto; padding:1.25rem; background:#ffffff; border-radius:12px; box-shadow:0 8px 30px rgba(11, 26, 43, 0.08); }
+.content h2 { margin-top:1rem; color:#023047; }
+.content p, .content ul, .content ol { margin:0.6rem 0 0.9rem 0; line-height:1.6; }
+.content ul { padding-left:1.15rem; }
+
+/* Footer */
+.site-footer { text-align:center; padding:1rem; color:#0b1a2b; }
+
+/* Links */
+a { color:#0077b6; }
+a:hover { text-decoration:underline; }
+
+/* Theme: dark toggle applied by .dark on body */
+body.dark {
+  background:#071422; color:#dbeef8;
+}
+body.dark .site-header { background: linear-gradient(90deg,#082b3a,#0b3f4a); color:#e6f7ff; }
+body.dark .content { background:#031821; box-shadow: 0 6px 18px rgba(0,0,0,0.6); color:#d7eef6; }
+body.dark a { color:#64d2ff; }
+
+/* Responsive nav stacking */
+@media (max-width:720px) {
+  .main-nav { order:3; width:100%; justify-content:space-around; padding-top:0.5rem; }
+  .brand { width:100%; text-align:center; }
+  .content { margin:0.75rem; padding:1rem; }
+}
+
+/* Print-friendly adjustments so content spans pages when printing */
+@media print {
+  body { background: #fff; color: #000; }
+  .site-header, .site-footer, .main-nav, button { display:none; }
+  .content { box-shadow:none; border-radius:0; max-width:100%; margin:0; padding:0; }
+  h1 { font-size:18pt; margin-bottom:8px; }
+  h2 { font-size:14pt; margin-top:10px; }
+}
+
+/* Visual niceties */
+.content ul li { margin:0.4rem 0; }
